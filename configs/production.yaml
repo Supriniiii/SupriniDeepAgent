@@ -1,0 +1,28 @@
+# DAEP Production Configuration
+
+platform:
+  name: "Deep Agent Engineering Platform"
+  version: "0.1.0"
+  environment: "production"
+
+orchestration:
+  max_retries: 5
+  timeout: 600
+  parallel_hooks: false
+
+logging:
+  level: "INFO"
+  structured: true
+  format: "json"
+
+knowledge:
+  base_path: ".kiro/knowledge"
+  cache_enabled: true
+
+templates:
+  base_path: ".kiro/templates"
+  strict_validation: true
+
+engines:
+  base_path: ".kiro/engines"
+  validation_enabled: true

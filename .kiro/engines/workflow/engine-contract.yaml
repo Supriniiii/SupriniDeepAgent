@@ -1,0 +1,80 @@
+engine:
+  id: workflow
+  name: Workflow Engineering Engine
+  version: 1.0.0
+
+description: >
+  Designs the execution workflow for Deep Agents, including task sequencing,
+  state transitions, branching logic, synchronization, retries, approvals,
+  and workflow completion.
+
+owner:
+  hook: workflow
+
+trigger:
+  after: harness
+
+inputs:
+  - architecture.md
+  - harness-specification.md
+  - runtime-architecture.md
+  - execution-model.md
+  - lifecycle-model.md
+  - state-management.md
+  - component-plan.md
+  - component-dependencies.md
+  - steering/product.md
+  - steering/structure.md
+  - steering/tech.md
+  - knowledge/workflows/
+  - knowledge/harnesses/
+  - knowledge/components/
+  - knowledge/examples/
+  - knowledge/security/
+  - knowledge/governance/
+  - knowledge/decision_rules/
+  - registries/workflows/
+
+outputs:
+  - workflow-specification.md
+  - workflow-diagram.md
+  - execution-plan.md
+  - state-machine.md
+  - transition-rules.md
+  - decision-tree.md
+  - retry-policy.md
+  - approval-flow.md
+
+consumers:
+  - memory
+  - prompt
+  - validation
+
+responsibilities:
+  - Analyze runtime requirements
+  - Design execution workflow
+  - Define workflow states
+  - Define state transitions
+  - Define branching logic
+  - Define synchronization points
+  - Define retry policies
+  - Define approval workflows
+  - Produce Workflow Specification
+
+validation:
+  required:
+    - Workflow specification completed
+    - State machine defined
+    - Transitions documented
+    - Decision logic complete
+    - Retry policy defined
+    - Approval flow documented
+    - Completion criteria defined
+    - No unreachable workflow states
+
+failure:
+  stop_pipeline: true
+  request_workflow_review: true
+
+success:
+  next_engine: memory

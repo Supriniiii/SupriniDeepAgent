@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Type checking
+.mypy_cache/
+
+# Environment
+.env
+.env.local
+*.ini
+!configs/*.yaml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs
+.kiro/outputs/
+
+# Secrets
+*.pem
+*.key

@@ -1,0 +1,76 @@
+engine:
+  id: validation
+  name: Validation Engineering Engine
+  version: 1.0.0
+
+description: >
+  Validates that the generated Deep Agent satisfies all engineering
+  specifications, governance requirements, architectural decisions,
+  and production readiness criteria.
+
+owner:
+  hook: validation
+
+trigger:
+  after: prompt
+
+inputs:
+  - requirements.md
+  - architecture.md
+  - capability-plan.md
+  - component-plan.md
+  - harness-specification.md
+  - workflow-specification.md
+  - memory-strategy.md
+  - prompt-package.md
+  - steering/product.md
+  - steering/structure.md
+  - steering/tech.md
+  - knowledge/validation/
+  - knowledge/governance/
+  - knowledge/security/
+  - knowledge/testing/
+  - knowledge/examples/
+  - knowledge/decision_rules/
+  - registries/
+
+outputs:
+  - validation-report.md
+  - compliance-report.md
+  - traceability-matrix.md
+  - production-readiness.md
+  - validation-summary.md
+  - engineering-scorecard.md
+
+consumers:
+  - evaluation
+
+responsibilities:
+  - Validate requirements
+  - Validate architecture
+  - Validate capabilities
+  - Validate components
+  - Validate Harness
+  - Validate workflows
+  - Validate memory
+  - Validate prompt architecture
+  - Validate governance
+  - Generate engineering scorecard
+
+validation:
+  required:
+    - Requirements validated
+    - Architecture validated
+    - Workflow validated
+    - Harness validated
+    - Memory validated
+    - Prompt architecture validated
+    - Governance validated
+    - Production readiness assessed
+
+failure:
+  stop_pipeline: true
+  require_engineering_review: true
+
+success:
+  next_engine: evaluation

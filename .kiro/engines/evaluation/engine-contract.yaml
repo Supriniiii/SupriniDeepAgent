@@ -1,0 +1,74 @@
+engine:
+  id: evaluation
+  name: Evaluation Engineering Engine
+  version: 1.0.0
+
+description: >
+  Evaluates the engineering quality, operational performance,
+  maintainability, scalability, and overall effectiveness of
+  generated Deep Agents.
+
+owner:
+  hook: post-generation
+
+trigger:
+  after: validation
+
+inputs:
+  - validation-report.md
+  - engineering-scorecard.md
+  - architecture.md
+  - harness-specification.md
+  - workflow-specification.md
+  - memory-strategy.md
+  - prompt-package.md
+  - production-readiness.md
+  - steering/product.md
+  - steering/structure.md
+  - steering/tech.md
+  - knowledge/testing/
+  - knowledge/validation/
+  - knowledge/observability/
+  - knowledge/governance/
+  - knowledge/examples/
+  - knowledge/decision_rules/
+  - registries/
+
+outputs:
+  - evaluation-report.md
+  - benchmark-results.md
+  - quality-metrics.md
+  - performance-summary.md
+  - optimization-recommendations.md
+  - engineering-health-score.md
+  - evaluation-summary.md
+
+consumers:
+  - outputs
+  - knowledge
+
+responsibilities:
+  - Evaluate engineering quality
+  - Evaluate architecture quality
+  - Evaluate runtime performance
+  - Evaluate workflow efficiency
+  - Evaluate memory quality
+  - Evaluate prompt quality
+  - Evaluate operational quality
+  - Produce engineering metrics
+  - Recommend optimizations
+
+validation:
+  required:
+    - Quality metrics generated
+    - Benchmark results documented
+    - Engineering health score calculated
+    - Optimization recommendations provided
+    - Evaluation report completed
+
+failure:
+  stop_pipeline: false
+  require_follow_up_review: true
+
+success:
+  next_engine: complete

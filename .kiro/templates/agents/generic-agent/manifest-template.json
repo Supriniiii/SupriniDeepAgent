@@ -1,0 +1,190 @@
+{
+  "manifest": {
+    "schema_version": "1.0.0",
+    "generated_by": "Deep Agent Engineering Platform",
+    "generation_date": "{{generation_date}}"
+  },
+  "agent": {
+    "id": "{{agent_id}}",
+    "name": "{{agent_name}}",
+    "version": "{{version}}",
+    "description": "{{agent_description}}",
+    "category": "{{category}}",
+    "template": "generic-agent",
+    "status": "{{status}}",
+    "author": "{{author}}"
+  },
+  "architecture": {
+    "pattern": "{{architecture_pattern}}",
+    "harness": "{{harness_type}}",
+    "execution_model": "{{execution_model}}",
+    "orchestration": "{{orchestration_model}}"
+  },
+  "components": {
+    "planner": {
+      "enabled": true,
+      "description": "{{planner_description}}"
+    },
+    "executor": {
+      "enabled": true,
+      "description": "{{executor_description}}"
+    },
+    "reflection": {
+      "enabled": "{{reflection_enabled}}",
+      "description": "{{reflection_description}}"
+    },
+    "verifier": {
+      "enabled": "{{verification_enabled}}",
+      "description": "{{verifier_description}}"
+    },
+    "evaluator": {
+      "enabled": "{{evaluation_enabled}}",
+      "description": "{{evaluator_description}}"
+    },
+    "memory_manager": {
+      "enabled": true,
+      "description": "{{memory_manager_description}}"
+    },
+    "tool_manager": {
+      "enabled": true,
+      "description": "{{tool_manager_description}}"
+    },
+    "workflow_manager": {
+      "enabled": true,
+      "description": "{{workflow_manager_description}}"
+    },
+    "state_manager": {
+      "enabled": true,
+      "description": "{{state_manager_description}}"
+    }
+  },
+  "capabilities": [
+    "{{capability_1}}",
+    "{{capability_2}}",
+    "{{capability_3}}"
+  ],
+  "workflow": {
+    "type": "{{workflow_type}}",
+    "primary": "{{primary_workflow}}",
+    "recovery": "{{recovery_workflow}}",
+    "stages": [
+      "intake",
+      "planning",
+      "execution",
+      "reflection",
+      "verification",
+      "evaluation",
+      "response",
+      "memory_update"
+    ]
+  },
+  "memory": {
+    "working_memory": {
+      "enabled": true,
+      "max_size": "{{working_memory_max_size}}"
+    },
+    "session_memory": {
+      "enabled": true,
+      "retention": "{{session_memory_retention}}"
+    },
+    "long_term_memory": {
+      "enabled": "{{long_term_memory_enabled}}",
+      "storage": "{{long_term_storage}}"
+    },
+    "shared_memory": {
+      "enabled": "{{shared_memory_enabled}}",
+      "synchronization": "{{shared_synchronization}}"
+    }
+  },
+  "prompts": {
+    "system": "{{system_prompt_reference}}",
+    "planning": "{{planning_prompt_reference}}",
+    "execution": "{{execution_prompt_reference}}",
+    "reflection": "{{reflection_prompt_reference}}",
+    "verification": "{{verification_prompt_reference}}",
+    "evaluation": "{{evaluation_prompt_reference}}"
+  },
+  "model_routing": {
+    "planning": "{{planning_model}}",
+    "execution": "{{execution_model}}",
+    "reflection": "{{reflection_model}}",
+    "verification": "{{verification_model}}",
+    "evaluation": "{{evaluation_model}}",
+    "fallback": "{{fallback_model}}"
+  },
+  "tools": [
+    {
+      "name": "{{tool_1_name}}",
+      "purpose": "{{tool_1_purpose}}",
+      "required": "{{tool_1_required}}"
+    },
+    {
+      "name": "{{tool_2_name}}",
+      "purpose": "{{tool_2_purpose}}",
+      "required": "{{tool_2_required}}"
+    },
+    {
+      "name": "{{tool_3_name}}",
+      "purpose": "{{tool_3_purpose}}",
+      "required": "{{tool_3_required}}"
+    }
+  ],
+  "configuration": {
+    "execution_mode": "{{execution_mode}}",
+    "timeout": "{{timeout}}",
+    "max_iterations": "{{max_iterations}}",
+    "retry_policy": "{{retry_policy}}",
+    "max_retries": "{{max_retries}}",
+    "parallel_execution": "{{parallel_execution}}"
+  },
+  "security": {
+    "authentication": "{{authentication}}",
+    "authorization": "{{authorization}}",
+    "encryption": "{{encryption}}",
+    "secrets_management": "{{secrets_management}}",
+    "audit_logging": "{{audit_logging}}"
+  },
+  "observability": {
+    "logging_enabled": true,
+    "logging_level": "{{logging_level}}",
+    "metrics_enabled": "{{metrics_enabled}}",
+    "tracing_enabled": "{{tracing_enabled}}",
+    "health_checks": "{{health_checks}}"
+  },
+  "deployment": {
+    "target_environment": "{{target_environment}}",
+    "strategy": "{{deployment_strategy}}",
+    "containerized": "{{containerized}}",
+    "scaling": "{{scaling_strategy}}",
+    "health_check_endpoint": "{{health_check_endpoint}}"
+  },
+  "evaluation": {
+    "criteria": "{{evaluation_criteria}}",
+    "metrics": "{{evaluation_metrics}}",
+    "quality_threshold": "{{quality_threshold}}"
+  },
+  "governance": {
+    "version_control": true,
+    "change_management": "{{change_management}}",
+    "approval_required": "{{approval_required}}",
+    "compliance": "{{compliance_requirements}}"
+  },
+  "dependencies": [
+    {
+      "name": "{{dependency_1}}",
+      "purpose": "{{dependency_purpose_1}}",
+      "required": "{{dependency_required_1}}"
+    },
+    {
+      "name": "{{dependency_2}}",
+      "purpose": "{{dependency_purpose_2}}",
+      "required": "{{dependency_required_2}}"
+    }
+  ],
+  "extension_points": {
+    "custom_components": "{{custom_components_allowed}}",
+    "custom_workflows": "{{custom_workflows_allowed}}",
+    "custom_prompts": "{{custom_prompts_allowed}}",
+    "custom_tools": "{{custom_tools_allowed}}"
+  }
+}

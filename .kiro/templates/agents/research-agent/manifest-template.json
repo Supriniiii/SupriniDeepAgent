@@ -1,0 +1,60 @@
+{
+  "manifest": {
+    "schema_version": "1.0.0",
+    "generated_by": "Deep Agent Engineering Platform",
+    "generation_date": "{{generation_date}}"
+  },
+  "agent": {
+    "id": "{{agent_id}}",
+    "name": "{{agent_name}}",
+    "version": "{{version}}",
+    "description": "{{agent_description}}",
+    "category": "research",
+    "template": "research-agent",
+    "status": "{{status}}",
+    "author": "{{author}}"
+  },
+  "architecture": {
+    "pattern": "planner-executor",
+    "harness": "research",
+    "execution_model": "{{execution_model}}",
+    "orchestration": "iterative_with_synthesis"
+  },
+  "components": {
+    "planner": { "enabled": true },
+    "executor": { "enabled": true },
+    "reflection": { "enabled": true },
+    "verifier": { "enabled": true },
+    "evaluator": { "enabled": true },
+    "memory_manager": { "enabled": true },
+    "tool_manager": { "enabled": true },
+    "workflow_manager": { "enabled": true },
+    "state_manager": { "enabled": true },
+    "source_manager": { "enabled": true },
+    "evidence_manager": { "enabled": true },
+    "synthesis_engine": { "enabled": true },
+    "citation_manager": { "enabled": true }
+  },
+  "capabilities": [
+    "research_planning",
+    "information_retrieval",
+    "evidence_validation",
+    "knowledge_synthesis",
+    "citation_management",
+    "report_generation",
+    "source_credibility_assessment",
+    "iterative_refinement"
+  ],
+  "tools": [
+    { "category": "language_models", "required": true },
+    { "category": "search_engines", "required": true },
+    { "category": "knowledge_bases", "required": false },
+    { "category": "vector_databases", "required": false },
+    { "category": "document_repositories", "required": false },
+    { "category": "citation_services", "required": false }
+  ],
+  "deployment": {
+    "target_environment": "{{target_environment}}",
+    "strategy": "{{deployment_strategy}}"
+  }
+}

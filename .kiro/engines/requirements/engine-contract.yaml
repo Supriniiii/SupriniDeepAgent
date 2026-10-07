@@ -1,0 +1,59 @@
+engine:
+  id: requirements
+  name: Requirements Engineering Engine
+  version: 1.0.0
+
+description: >
+  Transforms developer requests into structured engineering requirements.
+
+owner:
+  hook: requirements
+
+trigger:
+  after: intake
+
+inputs:
+  - request-package.md
+  - steering/product.md
+  - steering/structure.md
+  - steering/tech.md
+  - knowledge/
+  - registries/
+
+outputs:
+  - requirements.md
+  - requirements-summary.md
+  - assumptions.md
+  - constraints.md
+  - acceptance-criteria.md
+  - risk-register.md
+
+consumers:
+  - architecture
+  - validation
+  - evaluation
+
+responsibilities:
+  - Extract business requirements
+  - Generate functional requirements
+  - Generate non-functional requirements
+  - Identify constraints
+  - Identify assumptions
+  - Identify risks
+  - Define acceptance criteria
+  - Validate completeness
+
+validation:
+  required:
+    - Functional requirements exist
+    - Non-functional requirements exist
+    - Acceptance criteria exist
+    - No conflicting requirements
+    - Risks documented
+
+failure:
+  stop_pipeline: true
+  request_clarification: true
+
+success:
+  next_engine: architecture

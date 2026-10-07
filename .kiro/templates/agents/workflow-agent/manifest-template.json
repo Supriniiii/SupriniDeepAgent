@@ -1,0 +1,63 @@
+{
+  "manifest": {
+    "schema_version": "1.0.0",
+    "generated_by": "Deep Agent Engineering Platform",
+    "generation_date": "{{generation_date}}"
+  },
+  "agent": {
+    "id": "{{agent_id}}",
+    "name": "{{agent_name}}",
+    "version": "{{version}}",
+    "description": "{{agent_description}}",
+    "category": "workflow_automation",
+    "template": "workflow-agent",
+    "status": "{{status}}",
+    "author": "{{author}}"
+  },
+  "architecture": {
+    "pattern": "orchestrator",
+    "harness": "workflow",
+    "execution_model": "{{execution_model}}",
+    "orchestration": "stage_based_with_approvals"
+  },
+  "components": {
+    "planner": { "enabled": true },
+    "executor": { "enabled": true },
+    "reflection": { "enabled": true },
+    "verifier": { "enabled": true },
+    "evaluator": { "enabled": true },
+    "memory_manager": { "enabled": true },
+    "tool_manager": { "enabled": true },
+    "workflow_manager": { "enabled": true },
+    "state_manager": { "enabled": true },
+    "process_coordinator": { "enabled": true },
+    "approval_manager": { "enabled": true },
+    "transition_manager": { "enabled": true },
+    "dependency_resolver": { "enabled": true },
+    "recovery_manager": { "enabled": true }
+  },
+  "capabilities": [
+    "workflow_orchestration",
+    "conditional_branching",
+    "parallel_execution",
+    "approval_management",
+    "human_in_loop",
+    "state_persistence",
+    "checkpoint_recovery",
+    "service_coordination",
+    "dependency_management",
+    "long_running_execution"
+  ],
+  "tools": [
+    { "category": "language_models", "required": true },
+    { "category": "enterprise_services", "required": false },
+    { "category": "apis", "required": false },
+    { "category": "messaging", "required": false },
+    { "category": "databases", "required": false },
+    { "category": "monitoring", "required": false }
+  ],
+  "deployment": {
+    "target_environment": "{{target_environment}}",
+    "strategy": "{{deployment_strategy}}"
+  }
+}

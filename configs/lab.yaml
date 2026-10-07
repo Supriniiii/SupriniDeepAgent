@@ -1,0 +1,41 @@
+# DAEP Lab Configuration
+# Organization-specific settings for the engineering lab
+
+platform:
+  name: "Deep Agent Engineering Platform"
+  version: "0.1.0"
+  environment: "lab"
+
+orchestration:
+  max_retries: 3
+  timeout: 300
+  parallel_hooks: false
+
+logging:
+  level: "DEBUG"
+  structured: true
+  format: "json"
+
+knowledge:
+  base_path: ".kiro/knowledge"
+  cache_enabled: true
+
+templates:
+  base_path: ".kiro/templates"
+  strict_validation: false
+
+engines:
+  base_path: ".kiro/engines"
+  validation_enabled: true
+
+# Lab-specific AI configuration
+ai:
+  provider: "azure_openai"
+  model: "aim-gpt-4o-mini-lab"
+  embedding_model: "aim-text-embedding-3-large-lab"
+  api_type: "azure"
+
+# Lab-specific data configuration
+data:
+  teradata_host: "edw.gslb.fnb.co.za"
+  hive_host: "bdpi.gslb.fnb.co.za"

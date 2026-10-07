@@ -1,0 +1,14 @@
+name: Deep Agent Engineering
+description: >
+  Enterprise Kiro Skill for engineering and generating production-ready
+  Deep Agents, Agent Harnesses, reusable Components, and Kiro Skills.
+version: 1.0.0
+author: AI Engineering Team
+category: Engineering
+tags:
+  - ai
+  - deep-agents
+  - architecture
+  - orchestration
+  - kiro
+  - agent-harness

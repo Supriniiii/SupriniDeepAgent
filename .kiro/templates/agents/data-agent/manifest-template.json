@@ -1,0 +1,65 @@
+{
+  "manifest": {
+    "schema_version": "1.0.0",
+    "generated_by": "Deep Agent Engineering Platform",
+    "generation_date": "{{generation_date}}"
+  },
+  "agent": {
+    "id": "{{agent_id}}",
+    "name": "{{agent_name}}",
+    "version": "{{version}}",
+    "description": "{{agent_description}}",
+    "category": "data_engineering",
+    "template": "data-agent",
+    "status": "{{status}}",
+    "author": "{{author}}"
+  },
+  "architecture": {
+    "pattern": "pipeline",
+    "harness": "workflow",
+    "execution_model": "{{execution_model}}",
+    "orchestration": "stage_based_pipeline"
+  },
+  "components": {
+    "planner": { "enabled": true },
+    "executor": { "enabled": true },
+    "reflection": { "enabled": true },
+    "verifier": { "enabled": true },
+    "evaluator": { "enabled": true },
+    "memory_manager": { "enabled": true },
+    "tool_manager": { "enabled": true },
+    "workflow_manager": { "enabled": true },
+    "state_manager": { "enabled": true },
+    "data_ingestion_manager": { "enabled": true },
+    "transformation_engine": { "enabled": true },
+    "data_validator": { "enabled": true },
+    "schema_manager": { "enabled": true },
+    "pipeline_coordinator": { "enabled": true },
+    "quality_assessor": { "enabled": true }
+  },
+  "capabilities": [
+    "data_ingestion",
+    "data_transformation",
+    "data_validation",
+    "schema_management",
+    "pipeline_orchestration",
+    "quality_assessment",
+    "lineage_tracking",
+    "error_handling",
+    "analytics",
+    "reporting"
+  ],
+  "tools": [
+    { "category": "language_models", "required": true },
+    { "category": "databases", "required": true },
+    { "category": "data_warehouses", "required": false },
+    { "category": "file_systems", "required": false },
+    { "category": "streaming_platforms", "required": false },
+    { "category": "apis", "required": false },
+    { "category": "analytics_tools", "required": false }
+  ],
+  "deployment": {
+    "target_environment": "{{target_environment}}",
+    "strategy": "{{deployment_strategy}}"
+  }
+}

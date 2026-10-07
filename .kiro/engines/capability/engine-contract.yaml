@@ -1,0 +1,68 @@
+engine:
+  id: capability
+  name: Capability Engineering Engine
+  version: 1.0.0
+
+description: >
+  Discovers, evaluates, and selects reusable enterprise capabilities
+  required to satisfy the approved solution architecture.
+
+owner:
+  hook: capability-discovery
+
+trigger:
+  after: architecture
+
+inputs:
+  - architecture.md
+  - architecture-summary.md
+  - interface-specification.md
+  - technology-recommendations.md
+  - steering/product.md
+  - steering/structure.md
+  - steering/tech.md
+  - knowledge/capabilities/
+  - knowledge/components/
+  - knowledge/workflows/
+  - knowledge/examples/
+  - knowledge/governance/
+  - knowledge/decision_rules/
+  - registries/capabilities/
+
+outputs:
+  - capability-plan.md
+  - capability-catalog.md
+  - reusable-capabilities.md
+  - capability-gap-analysis.md
+  - capability-recommendations.md
+
+consumers:
+  - component
+  - harness
+  - workflow
+  - validation
+
+responsibilities:
+  - Analyze architecture
+  - Identify required capabilities
+  - Search capability registry
+  - Match reusable capabilities
+  - Evaluate compatibility
+  - Perform capability gap analysis
+  - Recommend new capabilities
+  - Produce Capability Plan
+
+validation:
+  required:
+    - Required capabilities identified
+    - Existing capabilities evaluated
+    - Capability gaps documented
+    - Duplicate capabilities avoided
+    - Recommendations justified
+
+failure:
+  stop_pipeline: false
+  continue_with_gap_analysis: true
+
+success:
+  next_engine: component

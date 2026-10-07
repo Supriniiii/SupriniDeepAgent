@@ -1,0 +1,76 @@
+engine:
+  id: prompt
+  name: Prompt Engineering Engine
+  version: 1.0.0
+
+description: >
+  Designs the reasoning layer for Deep Agents, including prompt architecture,
+  context assembly, memory integration, model routing, structured outputs,
+  and reusable prompt packages.
+
+owner:
+  hook: prompt-engineering
+
+trigger:
+  after: memory
+
+inputs:
+  - architecture.md
+  - workflow-specification.md
+  - harness-specification.md
+  - memory-strategy.md
+  - context-management.md
+  - retrieval-strategy.md
+  - component-plan.md
+  - steering/product.md
+  - steering/structure.md
+  - steering/tech.md
+  - knowledge/prompts/
+  - knowledge/workflows/
+  - knowledge/memory/
+  - knowledge/examples/
+  - knowledge/governance/
+  - knowledge/security/
+  - knowledge/decision_rules/
+  - registries/
+
+outputs:
+  - prompt-package.md
+  - prompt-architecture.md
+  - system-prompts.md
+  - reasoning-strategy.md
+  - prompt-composition.md
+  - context-assembly.md
+  - model-routing.md
+  - output-specification.md
+  - prompt-validation.md
+
+consumers:
+  - validation
+  - evaluation
+
+responsibilities:
+  - Design prompt architecture
+  - Define reasoning strategy
+  - Design prompt layers
+  - Define context assembly
+  - Define memory integration
+  - Define model routing
+  - Define structured outputs
+  - Produce Prompt Package
+
+validation:
+  required:
+    - Prompt architecture completed
+    - Context assembly defined
+    - Memory integration documented
+    - Model routing documented
+    - Output specification completed
+    - Prompt validation rules defined
+
+failure:
+  stop_pipeline: true
+  request_prompt_review: true
+
+success:
+  next_engine: validation

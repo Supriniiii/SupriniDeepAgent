@@ -1,0 +1,83 @@
+engine:
+  id: harness
+  name: Harness Engineering Engine
+  version: 1.0.0
+
+description: >
+  Designs the runtime execution environment for Deep Agents,
+  including lifecycle management, orchestration, state management,
+  scheduling, checkpointing, recovery, and observability.
+
+owner:
+  hook: harness
+
+trigger:
+  after: component
+
+inputs:
+  - architecture.md
+  - architecture-summary.md
+  - component-plan.md
+  - component-diagram.md
+  - component-dependencies.md
+  - implementation-plan.md
+  - technology-recommendations.md
+  - steering/product.md
+  - steering/structure.md
+  - steering/tech.md
+  - knowledge/harnesses/
+  - knowledge/workflows/
+  - knowledge/observability/
+  - knowledge/security/
+  - knowledge/deployment/
+  - knowledge/examples/
+  - knowledge/governance/
+  - knowledge/decision_rules/
+  - registries/harnesses/
+
+outputs:
+  - harness-specification.md
+  - runtime-architecture.md
+  - execution-model.md
+  - lifecycle-model.md
+  - state-management.md
+  - checkpoint-strategy.md
+  - recovery-strategy.md
+  - scheduling-strategy.md
+  - observability-plan.md
+
+consumers:
+  - workflow
+  - memory
+  - prompt
+  - validation
+
+responsibilities:
+  - Analyze runtime requirements
+  - Select execution model
+  - Design runtime architecture
+  - Define lifecycle management
+  - Define state management
+  - Define checkpoint strategy
+  - Define recovery strategy
+  - Define scheduling strategy
+  - Define observability
+  - Produce Harness Specification
+
+validation:
+  required:
+    - Runtime architecture defined
+    - Execution model selected
+    - Lifecycle documented
+    - State management defined
+    - Recovery strategy documented
+    - Checkpoint strategy documented
+    - Scheduling strategy defined
+    - Observability plan completed
+
+failure:
+  stop_pipeline: true
+  request_runtime_review: true
+
+success:
+  next_engine: workflow

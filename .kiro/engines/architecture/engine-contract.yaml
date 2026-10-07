@@ -1,0 +1,82 @@
+engine:
+  id: architecture
+  name: Architecture Engineering Engine
+  version: 1.0.0
+
+description: >
+  Transforms approved engineering requirements into a complete
+  production-ready solution architecture.
+
+owner:
+  hook: architecture
+
+trigger:
+  after: requirements
+
+inputs:
+  - requirements.md
+  - requirements-summary.md
+  - assumptions.md
+  - constraints.md
+  - acceptance-criteria.md
+  - risk-register.md
+  - steering/product.md
+  - steering/structure.md
+  - steering/tech.md
+  - knowledge/architectures/
+  - knowledge/components/
+  - knowledge/workflows/
+  - knowledge/security/
+  - knowledge/observability/
+  - knowledge/governance/
+  - knowledge/decision_rules/
+  - registries/
+
+outputs:
+  - architecture.md
+  - architecture-summary.md
+  - architecture-diagram.md
+  - adr.md
+  - interface-specification.md
+  - data-flow.md
+  - control-flow.md
+  - technology-recommendations.md
+
+consumers:
+  - capability
+  - component
+  - harness
+  - workflow
+  - validation
+
+responsibilities:
+  - Analyze engineering requirements
+  - Select architecture patterns
+  - Define system boundaries
+  - Design logical architecture
+  - Design runtime architecture
+  - Define components
+  - Define interfaces
+  - Define data flow
+  - Define control flow
+  - Produce Architecture Decision Records
+  - Recommend technologies
+  - Validate architectural completeness
+
+validation:
+  required:
+    - Architecture satisfies all mandatory requirements
+    - Components are fully defined
+    - Interfaces are documented
+    - Architecture decisions are recorded
+    - Data flow is complete
+    - Control flow is complete
+    - Technology recommendations are justified
+    - Architecture is internally consistent
+
+failure:
+  stop_pipeline: true
+  request_architecture_review: true
+
+success:
+  next_engine: capability

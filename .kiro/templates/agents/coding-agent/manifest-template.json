@@ -1,0 +1,61 @@
+{
+  "manifest": {
+    "schema_version": "1.0.0",
+    "generated_by": "Deep Agent Engineering Platform",
+    "generation_date": "{{generation_date}}"
+  },
+  "agent": {
+    "id": "{{agent_id}}",
+    "name": "{{agent_name}}",
+    "version": "{{version}}",
+    "description": "{{agent_description}}",
+    "category": "software_engineering",
+    "template": "coding-agent",
+    "status": "{{status}}",
+    "author": "{{author}}"
+  },
+  "architecture": {
+    "pattern": "planner-executor",
+    "harness": "coding",
+    "execution_model": "{{execution_model}}",
+    "orchestration": "sequential_with_reflection"
+  },
+  "components": {
+    "planner": { "enabled": true },
+    "executor": { "enabled": true },
+    "reflection": { "enabled": true },
+    "verifier": { "enabled": true },
+    "evaluator": { "enabled": true },
+    "memory_manager": { "enabled": true },
+    "tool_manager": { "enabled": true },
+    "workflow_manager": { "enabled": true },
+    "state_manager": { "enabled": true },
+    "repository_analyzer": { "enabled": true },
+    "code_generator": { "enabled": true },
+    "test_generator": { "enabled": true }
+  },
+  "capabilities": [
+    "code_generation",
+    "code_review",
+    "code_modification",
+    "test_generation",
+    "refactoring",
+    "documentation_generation",
+    "repository_analysis",
+    "static_analysis",
+    "bug_fixing"
+  ],
+  "tools": [
+    { "category": "language_models", "required": true },
+    { "category": "source_control", "required": true },
+    { "category": "build_systems", "required": false },
+    { "category": "test_frameworks", "required": false },
+    { "category": "static_analysis", "required": false },
+    { "category": "ide_integration", "required": false }
+  ],
+  "deployment": {
+    "target_environment": "{{target_environment}}",
+    "strategy": "{{deployment_strategy}}",
+    "containerized": "{{containerized}}"
+  }
+}

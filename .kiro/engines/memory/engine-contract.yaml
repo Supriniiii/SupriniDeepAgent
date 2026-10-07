@@ -1,0 +1,78 @@
+engine:
+  id: memory
+  name: Memory Engineering Engine
+  version: 1.0.0
+
+description: >
+  Designs the memory architecture for Deep Agents, including context
+  management, memory organization, persistence, retrieval,
+  lifecycle management, and governance.
+
+owner:
+  hook: memory
+
+trigger:
+  after: workflow
+
+inputs:
+  - architecture.md
+  - harness-specification.md
+  - workflow-specification.md
+  - execution-plan.md
+  - lifecycle-model.md
+  - state-management.md
+  - component-plan.md
+  - steering/product.md
+  - steering/structure.md
+  - steering/tech.md
+  - knowledge/memory/
+  - knowledge/workflows/
+  - knowledge/harnesses/
+  - knowledge/security/
+  - knowledge/governance/
+  - knowledge/examples/
+  - knowledge/decision_rules/
+  - registries/
+
+outputs:
+  - memory-strategy.md
+  - memory-architecture.md
+  - memory-model.md
+  - context-management.md
+  - retrieval-strategy.md
+  - persistence-strategy.md
+  - retention-policy.md
+  - memory-governance.md
+
+consumers:
+  - prompt
+  - validation
+  - evaluation
+
+responsibilities:
+  - Analyze memory requirements
+  - Design memory architecture
+  - Define memory types
+  - Define context management
+  - Define retrieval strategy
+  - Define persistence strategy
+  - Define retention policy
+  - Define governance rules
+  - Produce Memory Strategy
+
+validation:
+  required:
+    - Memory architecture defined
+    - Memory types identified
+    - Context management documented
+    - Retrieval strategy documented
+    - Persistence strategy documented
+    - Retention policy defined
+    - Governance policy documented
+
+failure:
+  stop_pipeline: true
+  request_memory_review: true
+
+success:
+  next_engine: prompt

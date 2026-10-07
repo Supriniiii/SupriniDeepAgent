@@ -1,0 +1,77 @@
+engine:
+  id: component
+  name: Component Engineering Engine
+  version: 1.0.0
+
+description: >
+  Identifies, selects, composes, and defines the reusable and new
+  software components required to implement the approved solution architecture.
+
+owner:
+  hook: component-selection
+
+trigger:
+  after: capability
+
+inputs:
+  - architecture.md
+  - architecture-summary.md
+  - capability-plan.md
+  - reusable-capabilities.md
+  - capability-gap-analysis.md
+  - interface-specification.md
+  - technology-recommendations.md
+  - steering/product.md
+  - steering/structure.md
+  - steering/tech.md
+  - knowledge/components/
+  - knowledge/architectures/
+  - knowledge/capabilities/
+  - knowledge/workflows/
+  - knowledge/examples/
+  - knowledge/governance/
+  - knowledge/decision_rules/
+  - registries/components/
+
+outputs:
+  - component-plan.md
+  - component-catalog.md
+  - component-diagram.md
+  - component-dependencies.md
+  - component-interfaces.md
+  - implementation-plan.md
+  - reusable-components.md
+  - new-components.md
+
+consumers:
+  - harness
+  - workflow
+  - memory
+  - prompt
+  - validation
+
+responsibilities:
+  - Analyze architecture
+  - Analyze capability plan
+  - Discover reusable components
+  - Select reusable components
+  - Define new components
+  - Define component interfaces
+  - Define dependencies
+  - Produce implementation plan
+
+validation:
+  required:
+    - Components satisfy architecture
+    - Interfaces documented
+    - Dependencies defined
+    - Reusable components evaluated
+    - New components justified
+    - No critical architectural gaps
+
+failure:
+  stop_pipeline: true
+  request_component_review: true
+
+success:
+  next_engine: harness
